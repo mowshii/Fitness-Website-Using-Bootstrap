@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import Workouts from "./pages/Workouts";
 import Programs from "./pages/Programs";
@@ -12,8 +14,9 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Fitness-Website-Using-Bootstrap">
       <Navbar />
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,6 +28,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+
       <Footer />
     </BrowserRouter>
   );
